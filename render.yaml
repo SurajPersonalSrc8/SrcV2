@@ -3,7 +3,7 @@ services:
     name: srcv2-django-app
     env: python
     buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput
-    startCommand: gunicorn your_project_name.wsgi:application
+    startCommand: python3 -m devgagan
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: your_project_name.settings.production
